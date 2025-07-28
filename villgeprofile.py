@@ -27,7 +27,7 @@ load_dotenv()
 # openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Securely read API key
-openai.api_key = st.secrets["openai"]["api_key"]
+openai.api_key = st.secrets["openai"]["OPENAI_API_KEY"]
 st.write("API key loaded:", "api_key" in st.secrets["openai"])
 
 
