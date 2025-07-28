@@ -28,6 +28,8 @@ load_dotenv()
 
 # Securely read API key
 openai.api_key = st.secrets["openai"]["api_key"]
+st.write("API key loaded:", "api_key" in st.secrets["openai"])
+
 
 # Set page configuration
 st.set_page_config(
