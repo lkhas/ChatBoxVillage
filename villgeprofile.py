@@ -309,7 +309,7 @@ def main():
         #     st.session_state.openai_api_key = openai_api_key
         #     st.success("✅ API Key configured")
 
-        openai_api_key = os.getenv("OPENAI_API_KEY")
+        openai_api_key =st.secrets["openai"]["OPENAI_API_KEY"]
 
         
         st.header("📁 Knowledge Base")
@@ -392,7 +392,7 @@ def main():
    
 
     # Main content area
-    if not openai_api_key == os.getenv("OPENAI_API_KEY"):
+    if not openai_api_key == st.secrets["openai"]["OPENAI_API_KEY"]:
         st.markdown("""
         <div class="upload-section">
             <h3>🔑 Getting Started</h3>
