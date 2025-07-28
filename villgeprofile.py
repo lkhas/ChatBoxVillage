@@ -310,7 +310,7 @@ def main():
         #     st.success("✅ API Key configured")
 
         openai_api_key =st.secrets["openai"]["OPENAI_API_KEY"]
-        client = OpenAI(openai_api_key=openai_api_key)
+        client = openai(openai_api_key=openai_api_key)
         
         # Test with a simple API call
         response = client.models.list()
